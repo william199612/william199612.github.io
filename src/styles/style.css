@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navlink-custom {
+  width: 12vh;
+  text-align: center;
+}
+
+.nav-link.active {
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */
