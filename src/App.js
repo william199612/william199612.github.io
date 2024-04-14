@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 
 import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Resume from "./pages/Resume";
@@ -23,6 +24,8 @@ function App() {
 				<Route path="/resume" element={<Resume />} />
 				<Route path="/portfolio" element={<Portfolio />} />
 			</Routes>
+
+			<Footer />
 		</Router>
 	);
 }
