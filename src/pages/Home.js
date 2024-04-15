@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "../styles/style.css";
 
+import INFO from "../data/user";
 import SplitButton from "../components/SplitButton";
 
 const Home = () => {
-	let [data, setData] = useState([]);
 	let [imageUrl, setImageUrl] = useState("");
 	let [page, setPage] = useState(1);
 	const [error, setError] = useState(null);
@@ -30,7 +30,6 @@ const Home = () => {
 			// console.log(data);
 			data = data.results[0];
 			setImageUrl(data.urls.raw);
-			setData(data);
 		} catch (err) {
 			setError(err.message);
 		}
@@ -48,12 +47,9 @@ const Home = () => {
 				style={{ backgroundImage: `url(${imageUrl})` }}
 			></div>
 			<div className="content-container">
-				<h1 className="content-title">
-					Welcome to my website
-				</h1>
+				<h1 className="content-title">{INFO.home.title}</h1>
 				<p className="content-text">
-					Hi! I'm William Hung. A software developer
-					studying QUT.
+					{INFO.home.description}
 				</p>
 				<SplitButton />
 			</div>
