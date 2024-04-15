@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../styles/style.css";
 
-import INFO from "../data/user";
+import INFO from "../data/info";
 import SplitButton from "../components/SplitButton";
 
 const Home = () => {
