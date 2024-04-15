@@ -31,7 +31,11 @@
 }
 
 .content-section {
+  margin: auto;
   padding-top: 30px;
+  margin-bottom: 50px;
+  width: 1100px;
+  height: 500px;
 }
 
 .round-img-container {
@@ -60,7 +64,7 @@
 
 .home-container {
   position: relative;
-  min-height: 68vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -105,18 +109,20 @@
   background-position: center;
 }
 
-.left-section {
-  position: relative;
+.about-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 400px;
-  height: 400px;
-  left: 35%;
-  top: 10%;
+  height: 100%;
+  margin: auto;
+  align-items: center;
 }
 
-.right-section {
-  position: relative;
-  width: 35rem;
-  top: 15%;
+.about-text {
+  display: flex;
+  height: 100%;
+  align-items: center;
 }
 
 .footer {

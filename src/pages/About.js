@@ -12,24 +12,143 @@ export default function About() {
 			</div>
 			<div className="content-section row">
 				<div className="col-md-6">
-					<div className="left-section">
+					<div className="about-img">
 						<div className="round-img-container">
 							<img
 								className="round-image"
-								src="https://images.unsplash.com/photo-1595947006841-0984683d036e?q=80&w=2532&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+								src={INFO.about.welcome.image}
 								alt=""
 							/>
 						</div>
 					</div>
 				</div>
 				<div className="col-md-6">
-					<div className="right-section">
-						<div className="secondary-title">Hi!</div>
-						<p className="secondary-description">
-							{INFO.about.description}
-						</p>
+					<div className="about-text">
+						<div>
+							<div className="secondary-title">
+								{INFO.about.welcome.title}
+							</div>
+							<p className="secondary-description">
+								{INFO.about.welcome.description}
+							</p>
+						</div>
 					</div>
 				</div>
+			</div>
+			<div className="content-section row">
+				<div className="col-md-6">
+					<div className="about-text">
+						<div>
+							<div className="secondary-title">
+								{INFO.about.who.title}
+							</div>
+							<p className="secondary-description">
+								{INFO.about.who.description}
+							</p>
+						</div>
+					</div>
+				</div>
+				<div className="col-md-6">
+					<div className="about-img">
+						<div className="round-img-container">
+							<img
+								className="round-image"
+								src={INFO.about.who.image}
+								alt=""
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div className="content-section row">
+				<div className="col-md-6">
+					<div className="about-img">
+						<div className="round-img-container">
+							<img
+								className="round-image"
+								src={INFO.about.story.image}
+								alt=""
+							/>
+						</div>
+					</div>
+				</div>
+				<div className="col-md-6">
+					<div className="about-text">
+						<div>
+							<div className="secondary-title">
+								{INFO.about.story.title}
+							</div>
+							<p className="secondary-description">
+								{INFO.about.story.description}
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div className="content-section row">
+				<div className="col-md-6">
+					<div className="about-text">
+						<div>
+							<div className="secondary-title">
+								{INFO.about.what.title}
+							</div>
+							<p className="secondary-description">
+								{INFO.about.what.description}
+							</p>
+						</div>
+					</div>
+				</div>
+				<div className="col-md-6">
+					<div className="about-img">
+						<div className="round-img-container">
+							<img
+								className="round-image"
+								src={INFO.about.what.image}
+								alt=""
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div className="content-section row">
+				<div className="col-md-6">
+					<div className="about-img">
+						<div className="round-img-container">
+							<img
+								className="round-image"
+								src={INFO.about.why.image}
+								alt=""
+							/>
+						</div>
+					</div>
+				</div>
+				<div className="col-md-6">
+					<div className="about-text">
+						<div>
+							<div className="secondary-title">
+								{INFO.about.why.title}
+							</div>
+							<p className="secondary-description">
+								{INFO.about.why.description}
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div className="content-section row">
+				<div className="col-md-6">
+					<div className="about-text">
+						<div>
+							<div className="secondary-title">
+								{INFO.about.getInTouch.title}
+							</div>
+							<p className="secondary-description">
+								{INFO.about.getInTouch.description}
+							</p>
+						</div>
+					</div>
+				</div>
+				<div className="col-md-6"></div>
 			</div>
 		</div>
 	);
