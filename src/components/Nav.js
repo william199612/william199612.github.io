@@ -26,8 +26,7 @@ const Nav = () => {
 							<li className="nav-item">
 								<NavLink
 									className="nav-link navlink-custom"
-									activeClassName="active"
-									exact
+									activeclassname="active"
 									to="/"
 								>
 									Home
@@ -36,7 +35,7 @@ const Nav = () => {
 							<li>
 								<NavLink
 									className="nav-link navlink-custom"
-									activeClassName="active"
+									activeclassname="active"
 									to="/about"
 								>
 									About
@@ -45,7 +44,7 @@ const Nav = () => {
 							<li>
 								<NavLink
 									className="nav-link navlink-custom"
-									activeClassName="active"
+									activeclassname="active"
 									to="/resume"
 								>
 									Resume
@@ -54,7 +53,7 @@ const Nav = () => {
 							<li>
 								<NavLink
 									className="nav-link navlink-custom"
-									activeClassName="active"
+									activeclassname="active"
 									to="/portfolio"
 								>
 									Portfolio

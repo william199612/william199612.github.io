@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import "../styles/style.css";
+
 export default function Footer() {
 	return (
 		<div className="footer">
@@ -39,7 +41,7 @@ export default function Footer() {
 						</Link>
 					</li>
 				</ul>
-				<p class="text-center text-body-secondary">
+				<p className="text-center text-body-secondary">
 					© 2024 QUT IFN666 Web Development - Assignment 2
 				</p>
 			</footer>
