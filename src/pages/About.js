@@ -1,5 +1,6 @@
 import React from "react";
 
+import ContactForm from "../components/ContactFrom";
 import INFO from "../data/info";
 
 export default function About() {
@@ -148,7 +149,11 @@ export default function About() {
 						</div>
 					</div>
 				</div>
-				<div className="col-md-6"></div>
+				<div className="col-md-6">
+					<div className="contact-form">
+						<ContactForm />
+					</div>
+				</div>
 			</div>
 		</div>
 	);

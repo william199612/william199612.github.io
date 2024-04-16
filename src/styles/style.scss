@@ -137,6 +137,52 @@
 	align-items: center;
 }
 
+.contact-form {
+	padding: 50px;
+	height: 100%;
+	padding-top: 80px;
+	max-width: 500px;
+	min-width: 400px;
+}
+
+.card-container {
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(170, 170, 170, 0.5);
+	border-radius: 20px;
+	// height: 400px;
+
+	.card-body-custom {
+		padding: 20px 30px;
+
+		.card-title {
+			font-size: 30px;
+			text-align: center;
+			padding: 20px 0 20px 0;
+		}
+
+		.input-layout {
+			width: 100%;
+			margin-bottom: 10px;
+			padding: 10px 10px 10px 20px;
+			border: 1px solid rgba(200, 200, 200, 0.8);
+			border-radius: 50px;
+		}
+		.textarea-layout {
+			width: 100%;
+			margin-bottom: 10px;
+			padding: 10px 10px 10px 20px;
+			border: 1px solid rgba(200, 200, 200, 0.8);
+			border-radius: 20px;
+		}
+		.submit-buttom {
+			width: 100%;
+			margin-bottom: 10px;
+			padding: 10px 10px 10px 20px;
+			border-radius: 20px;
+		}
+	}
+}
+
 // ------------------------------------------
 // footer
 .footer {
