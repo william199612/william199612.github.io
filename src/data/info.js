@@ -55,10 +55,11 @@ const INFO = {
 			"A passionate student at QUT pursuing a Master of IT with a focus on computer science. With a strong interest on machine learning and front-end development, I experienced two months of valuable internship experience as a Front End Intern. I thrive both as a collaborative team member and as an independent worker. I am characterized by my rapid learning abilities, keen attention to detail, and an unwavering eagerness to acquire new skills and tackle challenges.",
 		career: [
 			{
-				title: "Software Developer Intern",
+				title: "Software Development Intern",
 				date: "Jan 2024 - present",
 				location: "(Remote) Taipei, Taiwan",
 				company: "E2NOVA",
+				type: "IT",
 				companyLogo: "",
 				companyInfo:
 					"A cloud communication platform for business",
@@ -74,10 +75,11 @@ const INFO = {
 				date: "Dec 2024 - Jan 2023",
 				location: "Taipei, Taiwan",
 				company: "Askplore",
+				type: "IT",
 				companyLogo: "",
 				companyInfo:
 					'Specializes in "website design", "system development", "graphic design" and "brand planning" to help customers expand their business smoothly.',
-				companyLink: "",
+				companyLink: "https://www.askplore.com/en",
 				description: [
 					"Used Vue.js to create a case page for company official website",
 					"Adjusted and updated website page under the direction of the supervisor",
@@ -88,10 +90,11 @@ const INFO = {
 				date: "Mar 2021 - Apr 2022",
 				location: "Taipei, Taiwan",
 				company: "Encore Days",
+				type: "social",
 				companyLogo: "",
 				companyInfo:
 					"Social media platform for the pre-Millennial generations to increase their social capital, backed by Taiwan FamilyMart",
-				companyLink: "https://www.evoxglobal.com/en/home",
+				companyLink: "https://encoredays.com/en/",
 				description: [
 					"Increased the number of KOC on Encore platform from 30 to 100 under a month",
 					"Increased 15% on Facebook engagement (Share, Like, Comment) through social meida  operation within a month",
@@ -99,12 +102,15 @@ const INFO = {
 			},
 			{
 				title: "Venture Capital Intern",
-				date: "Aug 2018 - Sep 2018",
+				date: "Aug - Sep 2018",
 				location: "Taipei, Taiwan",
 				company: "CSC Venture Capital",
+				type: "Business",
 				companyLogo: "",
-				companyInfo: "",
-				companyLink: "https://www.evoxglobal.com/en/home",
+				companyInfo:
+					"CSC Venture Capital provide its investment targets long-term, stable financial resources and comprehensive assistance in areas ranging from IPO consultations, share distribution and allocation, financial services, etc.",
+				companyLink:
+					"https://www.capital.com.tw/en_V7/aboutcapital/group/CSCventure.aspx",
 				description: [
 					"Delivered an Online Furniture industry analysis report and provided investment recommendations based on trends",
 					"Supported an Asia-based music education platform to raise their Series B fundraising round",
