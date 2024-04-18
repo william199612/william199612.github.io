@@ -216,6 +216,21 @@
   width: 150px;
   margin: auto;
 }
+.resume-container .content-section .my-journey .resume-subtitle {
+  font-family: "Lucida Sans";
+  text-align: center;
+}
+.resume-container .content-section .my-journey .timeline {
+  padding-top: 50px;
+}
+
+.career-info {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid rgba(170, 170, 170, 0.9);
+  border-radius: 20px;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1);
+}
 
 .navlink-custom {
   width: 12vh;
