@@ -50,7 +50,7 @@ const INFO = {
 	resume: {
 		title: "Resume",
 		name: "William Hung",
-		subtitle: "Junior Software Engineer",
+		subtitle: "Junior Software Developer",
 		summary:
 			"A passionate student at QUT pursuing a Master of IT with a focus on computer science. With a strong interest on machine learning and front-end development, I experienced two months of valuable internship experience as a Front End Intern. I thrive both as a collaborative team member and as an independent worker. I am characterized by my rapid learning abilities, keen attention to detail, and an unwavering eagerness to acquire new skills and tackle challenges.",
 		career: [
@@ -118,19 +118,43 @@ const INFO = {
 			},
 		],
 		skills: {
-			programmingLanguage: ["JavaScript", "C#", "Python"],
-			framework: [
-				"React.js",
-				"Vue.js(learning)",
-				"Node.js",
-			],
-			database: ["MySQL", "MongoDB"],
-			versionControl: ["Git", "GitHub"],
-			pmTool: ["JIRA"],
-			cloudServices: ["AWS"],
+			0: {
+				name: "Programming Language",
+				description: ["JavaScript", "C#", "Python"],
+			},
+			1: {
+				name: "Web Development Framework",
+				description: ["React", "NodeJs"],
+			},
+			2: {
+				name: "Database",
+				description: ["MongoDB", "MySQL"],
+			},
+			3: {
+				name: "Version Control",
+				description: ["Git", "GitHub"],
+			},
+			4: {
+				name: "Project Management",
+				description: ["JIRA", "Confluence"],
+			},
+			5: {
+				name: "Cloud Service",
+				description: ["AWS"],
+			},
 		},
 		outputs: {},
-		qualifications: {},
+		qualifications: {
+			0: {
+				name: "AWS Connect Certificate",
+			},
+			1: {
+				name: "Udemy 2024 Full Stack Web Development",
+			},
+			2: {
+				name: "Udemy 2022 Python Full Course",
+			},
+		},
 	},
 };
 

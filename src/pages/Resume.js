@@ -10,6 +10,7 @@ import WorkIcon from "@mui/icons-material/Work";
 import GroupsIcon from "@mui/icons-material/Groups";
 import LaptopChromebookIcon from "@mui/icons-material/LaptopChromebook";
 import Typography from "@mui/material/Typography";
+import Stack from "@mui/material/Stack";
 
 import INFO from "../data/info";
 
@@ -88,6 +89,51 @@ const JourneyTimeline = () => {
 	);
 };
 
+const SkillSets = ({ skills }) => {
+	return (
+		<Stack
+			direction="row"
+			spacing={10}
+			sx={{
+				margin: "auto",
+				width: "900px",
+			}}
+			justifyContent="center"
+		>
+			{skills.map((skill) => {
+				return (
+					<>
+						<div className="icon-container">
+							<img
+								className="icon-image"
+								alt={skill}
+								src={require(
+									"../static/icons/" + skill + ".png"
+								)}
+							/>
+						</div>
+						<div style={{ marginLeft: "30px" }}>
+							<Typography
+								align="center"
+								sx={{
+									display: "flex",
+									alignItems: "center",
+									justifyContent: "center",
+									fontSize: "20px",
+									color: "grey",
+									height: "100%",
+								}}
+							>
+								{skill}
+							</Typography>
+						</div>
+					</>
+				);
+			})}
+		</Stack>
+	);
+};
+
 export default function Resume() {
 	return (
 		<div className="resume-container">
@@ -117,10 +163,60 @@ export default function Resume() {
 				<hr className="section-line" />
 			</div>
 			<div className="content-section">
-				<div className="my-journey">
-					<h2 className="resume-subtitle">My Journey</h2>
-					<div className="timeline">
-						<JourneyTimeline />
+				<h2 className="resume-subtitle">My Journey</h2>
+				<div className="detail-content">
+					<JourneyTimeline />
+				</div>
+			</div>
+			<div className="content-section">
+				<h2 className="resume-subtitle">Skills</h2>
+				<div className="detail-content">
+					{Object.values(INFO.resume.skills).map(
+						(skill, index) => {
+							return (
+								<div className="skillset" key={index}>
+									<Typography
+										align="center"
+										sx={{
+											paddingBottom: "30px",
+											fontSize: "24px",
+											color: "rgba(0,200,200)",
+										}}
+									>
+										{skill.name}
+									</Typography>
+									<SkillSets skills={skill.description} />
+								</div>
+							);
+						}
+					)}
+				</div>
+			</div>
+			<div className="content-section">
+				<h2 className="resume-subtitle">Qualifications</h2>
+				<div className="detail-content">
+					<div className="certificate-content">
+						<div className="image-container">
+							<img
+								className="certificate-image"
+								alt="AWS Connect Certificate"
+								src={require("../static/images/aws-connect-certificate.png")}
+							/>
+						</div>
+						<div className="image-container">
+							<img
+								className="certificate-image"
+								alt="AWS Connect Certificate"
+								src={require("../static/images/udemy-2024-full-stack-web-development.png")}
+							/>
+						</div>
+						<div className="image-container">
+							<img
+								className="certificate-image"
+								alt="AWS Connect Certificate"
+								src={require("../static/images/udemy-2022-python-full-course.png")}
+							/>
+						</div>
 					</div>
 				</div>
 			</div>
