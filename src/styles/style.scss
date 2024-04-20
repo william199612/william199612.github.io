@@ -295,6 +295,97 @@
 }
 
 // ------------------------------------------
+// portfolio
+.portfolio-container {
+	min-height: 100vh;
+	margin-bottom: 50px;
+	.content-section {
+		.resume-subtitle {
+			font-family: "Lucida Sans";
+			text-align: center;
+			padding-top: 30px;
+		}
+
+		.profile-section {
+			display: flex;
+			margin: auto;
+			padding: 40px 20px 20px 20px;
+
+			.gh-image {
+				margin: 0px 50px;
+				width: 200px;
+				height: 200px;
+			}
+			.profile-content {
+				margin: 0px 20px;
+
+				.profile-name {
+					font-size: 20px;
+					font-family: monospace;
+					padding: 10px;
+					border: 1px solid #ccc;
+					border-radius: 5px;
+					transition: transform 0.3s ease;
+
+					&:hover {
+						transform: scale(1.1);
+					}
+				}
+
+				.gh-info {
+					padding: 10px 0px;
+					.info {
+						display: flex;
+						padding-bottom: 8px;
+						.info-text {
+							height: 100%;
+							padding: 2px;
+							margin: 0px;
+							padding-left: 10px;
+							font-size: 16px;
+						}
+					}
+				}
+
+				.gh-status {
+					display: flex;
+					.profile-subtitle {
+						padding-left: 20px;
+						font-size: 18px;
+						.status-num {
+							font-size: 20px;
+							font-weight: bold;
+						}
+					}
+
+					.first-text {
+						padding-left: 5px;
+					}
+				}
+			}
+		}
+
+		.project-section {
+			display: flex;
+			padding-top: 30px;
+			width: 900px;
+			margin: auto;
+
+			.left-section {
+				padding: 20px;
+				width: 50%;
+			}
+
+			.right-section {
+				text-align: center;
+				padding: 20px;
+				width: 50%;
+			}
+		}
+	}
+}
+
+// ------------------------------------------
 // timeline component
 .career-info {
 	width: 100%;

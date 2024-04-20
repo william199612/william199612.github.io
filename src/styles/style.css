@@ -270,6 +270,83 @@
   transition: transform 0.3s ease;
 }
 
+.portfolio-container {
+  min-height: 100vh;
+  margin-bottom: 50px;
+}
+.portfolio-container .content-section .resume-subtitle {
+  font-family: "Lucida Sans";
+  text-align: center;
+  padding-top: 30px;
+}
+.portfolio-container .content-section .profile-section {
+  display: flex;
+  margin: auto;
+  padding: 40px 20px 20px 20px;
+}
+.portfolio-container .content-section .profile-section .gh-image {
+  margin: 0px 50px;
+  width: 200px;
+  height: 200px;
+}
+.portfolio-container .content-section .profile-section .profile-content {
+  margin: 0px 20px;
+}
+.portfolio-container .content-section .profile-section .profile-content .profile-name {
+  font-size: 20px;
+  font-family: monospace;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+.portfolio-container .content-section .profile-section .profile-content .profile-name:hover {
+  transform: scale(1.1);
+}
+.portfolio-container .content-section .profile-section .profile-content .gh-info {
+  padding: 10px 0px;
+}
+.portfolio-container .content-section .profile-section .profile-content .gh-info .info {
+  display: flex;
+  padding-bottom: 8px;
+}
+.portfolio-container .content-section .profile-section .profile-content .gh-info .info .info-text {
+  height: 100%;
+  padding: 2px;
+  margin: 0px;
+  padding-left: 10px;
+  font-size: 16px;
+}
+.portfolio-container .content-section .profile-section .profile-content .gh-status {
+  display: flex;
+}
+.portfolio-container .content-section .profile-section .profile-content .gh-status .profile-subtitle {
+  padding-left: 20px;
+  font-size: 18px;
+}
+.portfolio-container .content-section .profile-section .profile-content .gh-status .profile-subtitle .status-num {
+  font-size: 20px;
+  font-weight: bold;
+}
+.portfolio-container .content-section .profile-section .profile-content .gh-status .first-text {
+  padding-left: 5px;
+}
+.portfolio-container .content-section .project-section {
+  display: flex;
+  padding-top: 30px;
+  width: 900px;
+  margin: auto;
+}
+.portfolio-container .content-section .project-section .left-section {
+  padding: 20px;
+  width: 50%;
+}
+.portfolio-container .content-section .project-section .right-section {
+  text-align: center;
+  padding: 20px;
+  width: 50%;
+}
+
 .career-info {
   width: 100%;
   padding: 15px;
