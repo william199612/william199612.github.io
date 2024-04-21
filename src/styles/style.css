@@ -347,6 +347,32 @@
   width: 50%;
 }
 
+.clone-btn {
+  position: relative;
+}
+.clone-btn .MuiButtonBase-root {
+  width: 200px;
+  cursor: pointer;
+}
+.clone-btn .MuiButtonBase-root .MuiTypography-root {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-right: 5px;
+}
+.clone-btn .MuiButtonBase-root .MuiSvgIcon-root {
+  padding-left: 5px;
+}
+.clone-btn small.copy-msg {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(80, 150, 255, 0.7);
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
 .career-info {
   width: 100%;
   padding: 15px;
