@@ -1,22 +1,60 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import TextField from "@mui/material/TextField";
-import Stack from "@mui/material/Stack";
 import Autocomplete from "@mui/material/Autocomplete";
 
-export default function Searchbar() {
+import { fetchGitHubData } from "../services/githubAPI";
+
+const userRepoURL =
+	"https://api.github.com/users/william199612/repos";
+
+export default function Searchbar({
+	selectedRepoName,
+	setSelectedRepoName,
+}) {
+	const [inputValue, setInputValue] = useState("");
+	const [value, setValue] = useState("All");
+	const [repoData, setRepoData] = useState([]);
+	const [options, setOptions] = useState([]);
+
+	useEffect(() => {
+		fetchGitHubData(userRepoURL)
+			.then((data) => {
+				// console.log(data);
+				setRepoData(data);
+				let repoNameList = data.map((d) => d.name);
+				const repoList = ["All", ...repoNameList];
+				// console.log("urls", urls);
+				setOptions(repoList);
+			})
+			.catch((err) => {
+				console.error(
+					`Error fetching GitHub repo data: `,
+					err
+				);
+			});
+		setSelectedRepoName(value);
+	}, []);
+
 	return (
-		<Stack spacing={2} sx={{ width: 300 }}>
-			<Autocomplete
-				id="free-solo-demo"
-				freeSolo
-				options=""
-				renderInput={(params) => (
-					<TextField
-						{...params}
-						label="Search for a project..."
-					/>
-				)}
-			/>
-		</Stack>
+		<Autocomplete
+			value={selectedRepoName}
+			inputValue={inputValue}
+			onChange={(event, newValue) => {
+				setSelectedRepoName(newValue);
+			}}
+			onInputChange={(event, newInputValue) => {
+				setInputValue(newInputValue);
+			}}
+			id="controllable-states-demo"
+			options={options}
+			getOptionLabel={(option) => option || ""}
+			sx={{ width: 300 }}
+			renderInput={(params) => (
+				<TextField
+					{...params}
+					label="Search or Select a Repository"
+				/>
+			)}
+		/>
 	);
 }
