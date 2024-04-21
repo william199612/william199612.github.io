@@ -7,25 +7,29 @@ import EmailIcon from "@mui/icons-material/Email";
 import Button from "@mui/material/Button";
 
 import Searchbar from "../components/Searchbar";
+import RepoInfo from "../components/RepoInfo";
+import { fetchGitHubData } from "../services/githubAPI";
 import "../styles/style.css";
 
-const baseURL = "https://api.github.com/";
-const userRepoName = "users/william199612";
+const userProfileURL =
+	"https://api.github.com/users/william199612";
 
 export default function Portfolio() {
 	const [userData, setUserData] = useState([]);
+	const [repoData, setRepoData] = useState([]);
+	const [selectedRepoName, setSelectedRepoName] =
+		useState("All");
 
 	useEffect(() => {
 		// fetch for github user profile
-		(async () => {
-			let response = await fetch(baseURL + userRepoName);
-			if (!response.ok) {
-				throw new Error("Fail to fetch image");
-			}
-			let data = await response.json();
-			console.log(data);
-			setUserData(data);
-		})();
+		fetchGitHubData(userProfileURL)
+			.then((data) => setUserData(data))
+			.catch((err) =>
+				console.error(
+					"Error fetching GitHub user data: ",
+					err
+				)
+			);
 	}, []);
 
 	return (
@@ -92,7 +96,7 @@ export default function Portfolio() {
 						>
 							<span className="profile-name">
 								github.com/{userData.login}{" "}
-								<i class="fa-solid fa-link"></i>
+								<i className="fa-solid fa-link"></i>
 							</span>
 						</Link>
 					</div>
@@ -108,13 +112,19 @@ export default function Portfolio() {
 				</div>
 				<div className="project-section">
 					<div className="left-section">
-						<p>Searchbar and project list</p>
 						<div className="searchbar">
-							<Searchbar />
+							<Searchbar
+								selectedRepoName={selectedRepoName}
+								setSelectedRepoName={setSelectedRepoName}
+							/>
 						</div>
 					</div>
 					<div className="right-section">
-						<p>Show branch and chart</p>
+						{selectedRepoName == "All" ? null : (
+							<RepoInfo
+								selectedRepoName={selectedRepoName}
+							/>
+						)}
 					</div>
 				</div>
 			</div>

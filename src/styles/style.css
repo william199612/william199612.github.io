@@ -373,6 +373,29 @@
   border-radius: 10px;
 }
 
+.repo-title .MuiTypography-root {
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+.repo-title .MuiTypography-root .MuiSvgIcon-root {
+  transition: transform 0.3s ease;
+}
+.repo-title .MuiTypography-root .MuiSvgIcon-root:hover {
+  transform: scale(1.5);
+}
+.repo-title .MuiTypography-root .MuiSvgIcon-root:hover, .repo-title .MuiTypography-root .MuiSvgIcon-root:focus {
+  transition: transform 0.3s ease;
+}
+
+.commit-section {
+  height: 500px;
+  overflow-y: auto;
+  position: relative;
+}
+.commit-section .css-1ms7hib-MuiTimelineItem-root::before {
+  content: none !important;
+}
+
 .career-info {
   width: 100%;
   padding: 15px;

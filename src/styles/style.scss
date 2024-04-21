@@ -412,6 +412,34 @@
 	}
 }
 
+.repo-title {
+	.MuiTypography-root {
+		font-size: 20px;
+		padding-bottom: 20px;
+
+		.MuiSvgIcon-root {
+			transition: transform 0.3s ease;
+			&:hover {
+				transform: scale(1.5);
+			}
+			&:hover,
+			&:focus {
+				transition: transform 0.3s ease;
+			}
+		}
+	}
+}
+
+.commit-section {
+	height: 500px;
+	overflow-y: auto;
+	position: relative;
+
+	.css-1ms7hib-MuiTimelineItem-root::before {
+		content: none !important;
+	}
+}
+
 // ------------------------------------------
 // timeline component
 .career-info {
