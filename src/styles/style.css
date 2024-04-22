@@ -332,38 +332,59 @@
   padding-left: 5px;
 }
 .portfolio-container .content-section .project-section {
-  display: flex;
   padding-top: 30px;
   width: 900px;
   margin: auto;
 }
-.portfolio-container .content-section .project-section .left-section {
+.portfolio-container .content-section .project-section .top-section {
   padding: 20px;
-  width: 50%;
 }
-.portfolio-container .content-section .project-section .right-section {
+.portfolio-container .content-section .project-section .bottom-section {
   text-align: center;
   padding: 20px;
-  width: 50%;
 }
 
-.clone-btn {
+.repo-section {
+  display: flex;
+}
+.repo-section .repo-description {
+  width: 50%;
+}
+.repo-section .repo-description .repo-title a.repo-link {
+  text-decoration: none;
+}
+.repo-section .repo-description .repo-title a.repo-link p.MuiTypography-root {
+  color: black;
+  font-size: 20px;
+  padding-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+.repo-section .repo-description .repo-title a.repo-link p.MuiTypography-root .MuiSvgIcon-root {
+  color: rgb(0, 102, 255);
+}
+.repo-section .repo-description .repo-title a.repo-link p.MuiTypography-root:hover {
+  transform: scale(1.1);
+}
+.repo-section .repo-description .repo-title a.repo-link p.MuiTypography-root:hover, .repo-section .repo-description .repo-title a.repo-link p.MuiTypography-root:focus {
+  transition: transform 0.3s ease;
+}
+.repo-section .repo-description .clone-container .clone-btn {
   position: relative;
 }
-.clone-btn .MuiButtonBase-root {
+.repo-section .repo-description .clone-container .clone-btn .MuiButtonBase-root {
   width: 200px;
   cursor: pointer;
 }
-.clone-btn .MuiButtonBase-root .MuiTypography-root {
+.repo-section .repo-description .clone-container .clone-btn .MuiButtonBase-root .MuiTypography-root {
   display: flex;
   align-items: center;
   overflow: hidden;
   padding-right: 5px;
 }
-.clone-btn .MuiButtonBase-root .MuiSvgIcon-root {
+.repo-section .repo-description .clone-container .clone-btn .MuiButtonBase-root .MuiSvgIcon-root {
   padding-left: 5px;
 }
-.clone-btn small.copy-msg {
+.repo-section .repo-description .clone-container .clone-btn small.copy-msg {
   position: fixed;
   bottom: 10px;
   left: 50%;
@@ -372,28 +393,41 @@
   padding: 5px 10px;
   border-radius: 10px;
 }
-
-.repo-title .MuiTypography-root {
-  font-size: 20px;
-  padding-bottom: 20px;
+.repo-section .repo-description .description {
+  padding: 20px 10px 10px 10px;
 }
-.repo-title .MuiTypography-root .MuiSvgIcon-root {
-  transition: transform 0.3s ease;
+.repo-section .repo-description .description h6.MuiTypography-root.css-1lv9nvb-MuiTypography-root {
+  padding: 5px 0px;
 }
-.repo-title .MuiTypography-root .MuiSvgIcon-root:hover {
-  transform: scale(1.5);
+.repo-section .repo-description .description p.MuiTypography-root.css-zpphrz-MuiTypography-root {
+  padding: 5px 0px;
 }
-.repo-title .MuiTypography-root .MuiSvgIcon-root:hover, .repo-title .MuiTypography-root .MuiSvgIcon-root:focus {
-  transition: transform 0.3s ease;
+.repo-section .commit-container {
+  width: 50%;
 }
-
-.commit-section {
+.repo-section .commit-container .css-ahj2mt-MuiTypography-root {
+  padding-top: 10px;
+  font-size: 18px;
+}
+.repo-section .commit-container .commit-section {
   height: 500px;
   overflow-y: auto;
   position: relative;
+  margin-top: 10px;
 }
-.commit-section .css-1ms7hib-MuiTimelineItem-root::before {
+.repo-section .commit-container .commit-section .css-1ms7hib-MuiTimelineItem-root::before {
   content: none !important;
+}
+.repo-section .commit-container .commit-section .MuiTimeline-root .MuiTimelineItem-root .MuiGrid-root {
+  padding-left: 15px;
+}
+
+.css-66gjpw-MuiResponsiveChart-container {
+  margin-top: 20px;
+}
+.css-66gjpw-MuiResponsiveChart-container .css-1qkz8p7 {
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .career-info {

@@ -3,17 +3,18 @@ import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-
+import Grid from "@mui/material/Grid";
+import ListItemText from "@mui/material/ListItemText";
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineConnector from "@mui/lab/TimelineConnector";
-import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
-import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
-
-import { fetchGitHubData } from "../services/githubAPI";
 import { Typography } from "@mui/material";
+
+import AllRepoList from "./AllRepoList";
+import LanguageChart from "./LanguageChart";
+import { fetchGitHubData } from "../services/githubAPI";
 
 const shortenCommitSHA = (commitId) => {
 	return commitId.substring(0, 7);
@@ -22,26 +23,28 @@ const shortenCommitSHA = (commitId) => {
 const CommitTimeline = ({ commits }) => {
 	return (
 		<Timeline>
-			{commits.map((commit, index) => {
+			{commits.map((commit) => {
 				return (
-					<TimelineItem key={index}>
-						<Link to={commit.html_url} target="_blank">
-							<TimelineOppositeContent color="textSecondary">
-								<Typography>
-									{shortenCommitSHA(commit.sha)}
-									<br />
-									{commit.commit.author.date}
-								</Typography>
-							</TimelineOppositeContent>
-						</Link>
-
+					<TimelineItem key={commit.sha}>
 						<TimelineSeparator>
 							<TimelineDot />
 							<TimelineConnector />
 						</TimelineSeparator>
-						<TimelineContent>
-							{commit.commit.message}
-						</TimelineContent>
+						<Grid align="left">
+							<Link to={commit.html_url} target="_blank">
+								{shortenCommitSHA(commit.sha)}
+							</Link>
+							<ListItemText
+								secondary={commit.commit.author.date}
+							/>
+							<ListItemText
+								primary={commit.commit.message
+									.split("\n")
+									.map((line, index) => (
+										<p key={index}>{line}</p>
+									))}
+							/>
+						</Grid>
 					</TimelineItem>
 				);
 			})}
@@ -49,16 +52,25 @@ const CommitTimeline = ({ commits }) => {
 	);
 };
 
-export default function RepoInfo({ selectedRepoName }) {
+export default function RepoInfo({
+	selectedRepoName,
+	repoData,
+}) {
 	const [copied, setCopied] = useState(false);
+	const [selectedRepoData, setSelectedRepoData] = useState(
+		[]
+	);
+	const [selectedRepoLanguage, setSelectedRepoLanguage] =
+		useState([]);
 	const [commitData, setCommitData] = useState([]);
 
 	let repoURL = `https://github.com/william199612/${selectedRepoName}`;
 	let repoApiURL = `https://api.github.com/repos/william199612/${selectedRepoName}`;
-	let repoCloneURL = `${repoApiURL}/${selectedRepoName}.git`;
+	let repoCloneURL = `${repoURL}.git`;
+	let repoLanguagesURL = `${repoApiURL}/languages`;
 	let repoCommitURL = `${repoApiURL}/commits`;
 	let gitCloneCmd =
-		selectedRepoName == "All" || selectedRepoName == null
+		selectedRepoName === "All" || selectedRepoName === null
 			? null
 			: `git clone ${repoCloneURL}`;
 
@@ -72,51 +84,111 @@ export default function RepoInfo({ selectedRepoName }) {
 	};
 
 	useEffect(() => {
-		fetchGitHubData(repoCommitURL)
-			.then((data) => {
-				console.log(data);
-				setCommitData(data);
-			})
-			.catch((err) => {
-				console.error(
-					`Error fetching GitHub commits data: `,
-					err
-				);
-			});
-	}, []);
+		if (selectedRepoName !== "All") {
+			fetchGitHubData(repoApiURL)
+				.then((data) => {
+					// console.log(data);
+					setSelectedRepoData(data);
+				})
+				.catch((err) => {
+					console.error(
+						`Error fetching GitHub commits data: `,
+						err
+					);
+				});
+
+			fetchGitHubData(repoLanguagesURL)
+				.then((data) => {
+					// console.log(data);
+					setSelectedRepoLanguage(data);
+				})
+				.catch((err) => {
+					console.error(
+						`Error fetching GitHub commits data: `,
+						err
+					);
+				});
+
+			fetchGitHubData(repoCommitURL)
+				.then((data) => {
+					// console.log(data);
+					setCommitData(data);
+				})
+				.catch((err) => {
+					console.error(
+						`Error fetching GitHub commits data: `,
+						err
+					);
+				});
+		}
+	}, [selectedRepoName]);
 
 	return (
 		<>
-			{selectedRepoName == "All" ||
-			selectedRepoName == null ? null : (
+			{selectedRepoName === "All" ? (
+				<AllRepoList repoData={repoData} />
+			) : selectedRepoName === null ? null : (
 				<div className="repo-section">
-					<div className="repo-title">
-						<Typography>
-							{selectedRepoName}
-							<Link to={repoURL} target="_blank">
-								<KeyboardArrowRightIcon />
-							</Link>
-						</Typography>
-					</div>
-					<div className="clone-container">
-						<div className="clone-btn">
-							<Button
-								variant="outlined"
-								onClick={handleCopy}
+					<div className="repo-description">
+						<div className="repo-title">
+							<Link
+								className="repo-link"
+								to={repoURL}
+								target="_blank"
 							>
-								<Typography>Git Clone</Typography>
-								<ContentCopyIcon />
-							</Button>
-							{copied && (
-								<small className="copy-msg">
-									Copied to clipboard!
-								</small>
-							)}
+								<Typography>
+									{selectedRepoName}
+									<KeyboardArrowRightIcon />
+								</Typography>
+							</Link>
+						</div>
+						<div className="clone-container">
+							<div className="clone-btn">
+								<Button
+									variant="outlined"
+									onClick={handleCopy}
+								>
+									<Typography>Git Clone</Typography>
+									<ContentCopyIcon />
+								</Button>
+								{copied && (
+									<small className="copy-msg">
+										Copied to clipboard!
+									</small>
+								)}
+							</div>
+						</div>
+						<div className="description">
+							<Typography variant="body1" align="left">
+								Created at: {selectedRepoData.created_at}
+							</Typography>
+
+							<Typography variant="body1" align="left">
+								Last Update: {selectedRepoData.updated_at}
+							</Typography>
+							<Typography variant="h6" align="left">
+								Description:
+							</Typography>
+							<Typography variant="body1" align="left">
+								{selectedRepoData.description}
+							</Typography>
+							<Typography variant="h6" align="left">
+								Main Programming Language:
+							</Typography>
+							<Typography variant="body1" align="left">
+								{selectedRepoData.language}
+							</Typography>
+							<LanguageChart
+								selectedRepoLanguage={selectedRepoLanguage}
+							/>
 						</div>
 					</div>
 
-					<div className="commit-section">
-						<CommitTimeline commits={commitData} />
+					<div className="commit-container">
+						<Typography>Commits History</Typography>
+						<div className="commit-section">
+							<CommitTimeline commits={commitData} />
+						</div>
 					</div>
 				</div>
 			)}

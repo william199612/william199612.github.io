@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import NotificationsIcon from "@mui/icons-material/Notifications";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import CreateIcon from "@mui/icons-material/Create";
 import EmailIcon from "@mui/icons-material/Email";
@@ -9,7 +9,6 @@ import Button from "@mui/material/Button";
 import Searchbar from "../components/Searchbar";
 import RepoInfo from "../components/RepoInfo";
 import { fetchGitHubData } from "../services/githubAPI";
-import "../styles/style.css";
 
 const userProfileURL =
 	"https://api.github.com/users/william199612";
@@ -94,37 +93,32 @@ export default function Portfolio() {
 								textDecoration: "none",
 							}}
 						>
-							<span className="profile-name">
-								github.com/{userData.login}{" "}
-								<i className="fa-solid fa-link"></i>
-							</span>
+							<Button
+								className="sub-btn"
+								variant="contained"
+								endIcon={<GitHubIcon />}
+							>
+								{`github.com/${userData.login}`}
+							</Button>
 						</Link>
-					</div>
-					<div className="subscribe-section">
-						<Button
-							className="sub-btn"
-							variant="contained"
-							endIcon={<NotificationsIcon />}
-						>
-							Subscribe
-						</Button>
 					</div>
 				</div>
 				<div className="project-section">
-					<div className="left-section">
+					<div className="top-section">
 						<div className="searchbar">
 							<Searchbar
 								selectedRepoName={selectedRepoName}
 								setSelectedRepoName={setSelectedRepoName}
+								repoData={repoData}
+								setRepoData={setRepoData}
 							/>
 						</div>
 					</div>
-					<div className="right-section">
-						{selectedRepoName == "All" ? null : (
-							<RepoInfo
-								selectedRepoName={selectedRepoName}
-							/>
-						)}
+					<div className="bottom-section">
+						<RepoInfo
+							selectedRepoName={selectedRepoName}
+							repoData={repoData}
+						/>
 					</div>
 				</div>
 			</div>

@@ -10,10 +10,11 @@ const userRepoURL =
 export default function Searchbar({
 	selectedRepoName,
 	setSelectedRepoName,
+	repoData,
+	setRepoData,
 }) {
 	const [inputValue, setInputValue] = useState("");
 	const [value, setValue] = useState("All");
-	const [repoData, setRepoData] = useState([]);
 	const [options, setOptions] = useState([]);
 
 	useEffect(() => {
@@ -23,7 +24,6 @@ export default function Searchbar({
 				setRepoData(data);
 				let repoNameList = data.map((d) => d.name);
 				const repoList = ["All", ...repoNameList];
-				// console.log("urls", urls);
 				setOptions(repoList);
 			})
 			.catch((err) => {
@@ -48,7 +48,6 @@ export default function Searchbar({
 			id="controllable-states-demo"
 			options={options}
 			getOptionLabel={(option) => option || ""}
-			sx={{ width: 300 }}
 			renderInput={(params) => (
 				<TextField
 					{...params}
