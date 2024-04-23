@@ -1,582 +1,1014 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 .page-container {
-  min-height: 100vh;
+	min-height: 100vh;
 }
 
 .title-section {
-  padding-top: 20px;
-  margin-bottom: 20px;
+	padding-top: 20px;
+	margin-bottom: 20px;
 }
 .title-section .title {
-  font-size: 50px;
-  padding-top: 50px;
+	font-size: 50px;
+	padding-top: 50px;
 }
 .title-section .title-text {
-  font-size: 20px;
+	font-size: 20px;
 }
 
 .content-section {
-  margin: auto;
-  padding-top: 30px;
-  margin-bottom: 50px;
-  width: 1100px;
-  min-height: 500px;
+	margin: auto;
+	padding-top: 30px;
+	margin-bottom: 50px;
+	width: 1100px;
+	min-height: 500px;
 }
 
 .round-img-container {
-  width: 400px;
-  height: 400px;
-  overflow: hidden;
-  border-radius: 50%;
+	width: 400px;
+	height: 400px;
+	overflow: hidden;
+	border-radius: 50%;
 }
 .round-img-container .round-image {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 50%;
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+	border-radius: 50%;
 }
 
 .secondary-title {
-  font-size: 40px;
-  font-weight: bold;
+	font-size: 40px;
+	font-weight: bold;
 }
 
 .secondary-description {
-  padding-top: 20px;
-  font-size: 20px;
+	padding-top: 20px;
+	font-size: 20px;
 }
 
 hr.section-line {
-  border: 2px solid black;
-  width: 150px;
-  margin: auto;
-  margin-bottom: 20px;
+	border: 2px solid black;
+	width: 150px;
+	margin: auto;
+	margin-bottom: 20px;
 }
 
 small.copy-msg {
-  position: fixed;
-  bottom: 30px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 10px 20px;
-  border-radius: 10px;
-  color: white;
-  background-color: black;
-  z-index: 20;
+	position: fixed;
+	bottom: 30px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 10px 20px;
+	border-radius: 10px;
+	color: white;
+	background-color: black;
+	z-index: 20;
 }
 
 .home-container {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #f0f0f0;
-  background-size: cover;
-  background-position: center;
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #f0f0f0;
+	background-size: cover;
+	background-position: center;
 }
 
 .content-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-  background-color: white;
-  height: 30vh;
-  width: 35rem;
-  border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	background-color: white;
+	height: 30vh;
+	width: 35rem;
+	border-radius: 20px;
 }
 
 .text-wrapper {
-  margin: auto;
-  padding: 20px;
-  width: 450px;
+	margin: auto;
+	padding: 20px;
+	width: 450px;
 }
 .text-wrapper h4 {
-  font-family: "Lucida Sans";
-  font-weight: bold;
+	font-family: "Lucida Sans";
+	font-weight: bold;
 }
 .text-wrapper h6 {
-  padding: 10px 0px;
+	padding: 10px 0px;
 }
-.text-wrapper div .css-sghohy-MuiButtonBase-root-MuiButton-root {
-  margin-top: 10px;
-  transition: transform 0.5s ease;
+.text-wrapper
+	div
+	.css-sghohy-MuiButtonBase-root-MuiButton-root {
+	margin-top: 10px;
+	transition: transform 0.5s ease;
 }
-.text-wrapper div .css-sghohy-MuiButtonBase-root-MuiButton-root:hover {
-  transform: scale(1.1);
+.text-wrapper
+	div
+	.css-sghohy-MuiButtonBase-root-MuiButton-root:hover {
+	transform: scale(1.1);
 }
-.text-wrapper div .css-sghohy-MuiButtonBase-root-MuiButton-root:hover, .text-wrapper div .css-sghohy-MuiButtonBase-root-MuiButton-root:focus {
-  transition: transform 0.5s ease;
+.text-wrapper
+	div
+	.css-sghohy-MuiButtonBase-root-MuiButton-root:hover,
+.text-wrapper
+	div
+	.css-sghohy-MuiButtonBase-root-MuiButton-root:focus {
+	transition: transform 0.5s ease;
 }
 
 .content-title {
-  font-family: "Lucida Sans";
-  text-align: center;
-  padding-top: 90px;
+	font-family: "Lucida Sans";
+	text-align: center;
+	padding-top: 90px;
 }
 
 .content-text {
-  font-size: 16px;
-  margin-bottom: 30px;
+	font-size: 16px;
+	margin-bottom: 30px;
 }
 
 .picture-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
 }
 
 .css-ahj2mt-MuiTypography-root {
-  padding-right: 5px;
+	padding-right: 5px;
 }
 
 .css-i4bv87-MuiSvgIcon-root {
-  padding: 2px;
+	padding: 2px;
 }
 
 .about-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 400px;
-  height: 100%;
-  margin: auto;
-  align-items: center;
-  position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 400px;
+	height: 100%;
+	margin: auto;
+	align-items: center;
+	position: relative;
 }
 .about-img .generate-btn {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 5;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 5;
 }
-.about-img .generate-btn .css-sghohy-MuiButtonBase-root-MuiButton-root {
-  background-color: transparent;
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
+.about-img
+	.generate-btn
+	.css-sghohy-MuiButtonBase-root-MuiButton-root {
+	background-color: transparent;
+	width: 400px;
+	height: 400px;
+	border-radius: 50%;
 }
-.about-img .generate-btn .css-sghohy-MuiButtonBase-root-MuiButton-root .css-i4bv87-MuiSvgIcon-root {
-  height: 50px;
-  width: 50px;
-  transition: transform 0.3s ease;
+.about-img
+	.generate-btn
+	.css-sghohy-MuiButtonBase-root-MuiButton-root
+	.css-i4bv87-MuiSvgIcon-root {
+	height: 50px;
+	width: 50px;
+	transition: transform 0.3s ease;
 }
-.about-img .generate-btn .css-sghohy-MuiButtonBase-root-MuiButton-root .css-i4bv87-MuiSvgIcon-root:hover {
-  transform: scale(1.5);
+.about-img
+	.generate-btn
+	.css-sghohy-MuiButtonBase-root-MuiButton-root
+	.css-i4bv87-MuiSvgIcon-root:hover {
+	transform: scale(1.5);
 }
-.about-img .generate-btn .css-sghohy-MuiButtonBase-root-MuiButton-root .css-i4bv87-MuiSvgIcon-root:hover, .about-img .generate-btn .css-sghohy-MuiButtonBase-root-MuiButton-root .css-i4bv87-MuiSvgIcon-root:focus {
-  transition: transform 0.3s ease;
+.about-img
+	.generate-btn
+	.css-sghohy-MuiButtonBase-root-MuiButton-root
+	.css-i4bv87-MuiSvgIcon-root:hover,
+.about-img
+	.generate-btn
+	.css-sghohy-MuiButtonBase-root-MuiButton-root
+	.css-i4bv87-MuiSvgIcon-root:focus {
+	transition: transform 0.3s ease;
 }
 
 .about-text {
-  display: flex;
-  height: 100%;
-  align-items: center;
+	display: flex;
+	height: 100%;
+	align-items: center;
 }
 
 .contact-form {
-  padding: 50px;
-  height: 100%;
-  padding-top: 80px;
-  max-width: 500px;
-  min-width: 400px;
+	padding: 50px;
+	height: 100%;
+	padding-top: 80px;
+	max-width: 500px;
+	min-width: 400px;
 }
 
 .card-container {
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(170, 170, 170, 0.5);
-  border-radius: 20px;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(170, 170, 170, 0.5);
+	border-radius: 20px;
 }
 .card-container .card-body-custom {
-  padding: 20px 30px;
+	padding: 20px 30px;
 }
 .card-container .card-body-custom .card-title {
-  font-size: 30px;
-  text-align: center;
-  padding: 20px 0 20px 0;
+	font-size: 30px;
+	text-align: center;
+	padding: 20px 0 20px 0;
 }
 .card-container .card-body-custom .input-layout {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 10px 10px 10px 20px;
-  border: 1px solid rgba(200, 200, 200, 0.8);
-  border-radius: 50px;
+	width: 100%;
+	margin-bottom: 10px;
+	padding: 10px 10px 10px 20px;
+	border: 1px solid rgba(200, 200, 200, 0.8);
+	border-radius: 50px;
 }
 .card-container .card-body-custom .textarea-layout {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 10px 10px 10px 20px;
-  border: 1px solid rgba(200, 200, 200, 0.8);
-  border-radius: 20px;
+	width: 100%;
+	margin-bottom: 10px;
+	padding: 10px 10px 10px 20px;
+	border: 1px solid rgba(200, 200, 200, 0.8);
+	border-radius: 20px;
 }
 .card-container .card-body-custom .submit-buttom {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 10px 10px 10px 20px;
-  border-radius: 20px;
+	width: 100%;
+	margin-bottom: 10px;
+	padding: 10px 10px 10px 20px;
+	border-radius: 20px;
 }
 
 .success-message {
-  position: fixed;
-  top: 80px;
-  right: 20px;
-  padding: 10px 15px;
-  border: 1px solid rgba(170, 170, 170, 0.5);
-  border-radius: 20px;
-  background-color: black;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+	position: fixed;
+	top: 80px;
+	right: 20px;
+	padding: 10px 15px;
+	border: 1px solid rgba(170, 170, 170, 0.5);
+	border-radius: 20px;
+	background-color: black;
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
 }
 .success-message p.css-ahj2mt-MuiTypography-root {
-  color: white;
-  font-size: 18px;
+	color: white;
+	font-size: 18px;
 }
 
 .success-message.show {
-  opacity: 1;
+	opacity: 1;
 }
 
 .resume-container {
-  min-height: 100vh;
-  margin-bottom: 50px;
+	min-height: 100vh;
+	margin-bottom: 50px;
 }
 .resume-container .top-image {
-  min-height: 400px;
-  background-size: cover;
-  background-position: center;
+	min-height: 400px;
+	background-size: cover;
+	background-position: center;
 }
 .resume-container .avatar-container {
-  background-color: white;
-  width: 250px;
-  height: 250px;
-  overflow: hidden;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 1px solid rgba(170, 170, 170, 0.5);
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+	background-color: white;
+	width: 250px;
+	height: 250px;
+	overflow: hidden;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 1px solid rgba(170, 170, 170, 0.5);
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 .resume-container .avatar-container .avatar-image {
-  -o-object-fit: contain;
-     object-fit: contain;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
+	-o-object-fit: contain;
+	object-fit: contain;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
 }
 .resume-container .title-section {
-  margin: auto;
-  padding-top: 120px;
-  margin-bottom: 50px;
-  width: 900px;
+	margin: auto;
+	padding-top: 120px;
+	margin-bottom: 50px;
+	width: 900px;
 }
 .resume-container .title-section .resume-title {
-  margin: auto;
-  padding-top: 30px;
-  margin-bottom: 50px;
-  text-align: center;
-  width: 700px;
+	margin: auto;
+	padding-top: 30px;
+	margin-bottom: 50px;
+	text-align: center;
+	width: 700px;
 }
-.resume-container .title-section .resume-title .resume-name {
-  font-family: "Lucida Sans";
-  font-size: 40px;
-  font-weight: bold;
+.resume-container
+	.title-section
+	.resume-title
+	.resume-name {
+	font-family: "Lucida Sans";
+	font-size: 40px;
+	font-weight: bold;
 }
-.resume-container .title-section .resume-title .resume-subtitle {
-  font-family: "Lucida Sans";
-  padding: 10px 0px;
-  font-size: 30px;
-  color: rgba(170, 170, 170, 0.9);
+.resume-container
+	.title-section
+	.resume-title
+	.resume-subtitle {
+	font-family: "Lucida Sans";
+	padding: 10px 0px;
+	font-size: 30px;
+	color: rgba(170, 170, 170, 0.9);
 }
 .resume-container .content-section .resume-subtitle {
-  font-family: "Lucida Sans";
-  text-align: center;
+	font-family: "Lucida Sans";
+	text-align: center;
 }
 .resume-container .content-section .detail-content {
-  padding-top: 30px;
+	padding-top: 30px;
 }
-.resume-container .content-section .detail-content .skillset {
-  padding-bottom: 60px;
+.resume-container
+	.content-section
+	.detail-content
+	.skillset {
+	padding-bottom: 60px;
 }
 
 .icon-container {
-  display: block;
-  min-width: 120px;
-  margin: 10px;
+	display: block;
+	min-width: 120px;
+	margin: 10px;
 }
 .icon-container .icon-image {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+	-o-object-position: center;
+	object-position: center;
 }
 .icon-container .icon-text {
-  font-size: 16px;
-  padding-top: 10px;
+	font-size: 16px;
+	padding-top: 10px;
 }
 
 .certificate-content {
-  width: 900px;
-  margin: auto;
-  display: flex;
+	width: 900px;
+	margin: auto;
+	display: flex;
 }
 .certificate-content .image-container {
-  width: 400px;
+	width: 400px;
 }
 .certificate-content .image-container .certificate-image {
-  padding-top: 30px;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  transition: transform 0.3s ease;
+	padding-top: 30px;
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+	-o-object-position: center;
+	object-position: center;
+	transition: transform 0.3s ease;
 }
-.certificate-content .image-container .certificate-image:hover {
-  transform: scale(1.5);
+.certificate-content
+	.image-container
+	.certificate-image:hover {
+	transform: scale(1.5);
 }
-.certificate-content .image-container .certificate-image:hover, .certificate-content .image-container .certificate-image:focus {
-  transition: transform 0.3s ease;
+.certificate-content
+	.image-container
+	.certificate-image:hover,
+.certificate-content
+	.image-container
+	.certificate-image:focus {
+	transition: transform 0.3s ease;
 }
 
 .portfolio-container {
-  min-height: 100vh;
-  margin-bottom: 50px;
+	min-height: 100vh;
+	margin-bottom: 50px;
 }
 .portfolio-container .content-section .resume-subtitle {
-  font-family: "Lucida Sans";
-  text-align: center;
-  padding-top: 30px;
+	font-family: "Lucida Sans";
+	text-align: center;
+	padding-top: 30px;
 }
 .portfolio-container .content-section .profile-section {
-  display: flex;
-  width: 700px;
-  margin: auto;
-  padding: 40px 20px 20px 20px;
+	display: flex;
+	width: 700px;
+	margin: auto;
+	padding: 40px 20px 20px 20px;
 }
-.portfolio-container .content-section .profile-section .gh-image {
-  margin: 0px 50px;
-  width: 200px;
-  height: 200px;
+.portfolio-container
+	.content-section
+	.profile-section
+	.gh-image {
+	margin: 0px 50px;
+	width: 200px;
+	height: 200px;
 }
-.portfolio-container .content-section .profile-section .profile-content {
-  margin: 0px 20px;
+.portfolio-container
+	.content-section
+	.profile-section
+	.profile-content {
+	margin: 0px 20px;
 }
-.portfolio-container .content-section .profile-section .profile-content .profile-name {
-  font-size: 20px;
-  font-family: monospace;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  transition: transform 0.3s ease;
+.portfolio-container
+	.content-section
+	.profile-section
+	.profile-content
+	.profile-name {
+	font-size: 20px;
+	font-family: monospace;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	transition: transform 0.3s ease;
 }
-.portfolio-container .content-section .profile-section .profile-content .profile-name:hover {
-  transform: scale(1.1);
+.portfolio-container
+	.content-section
+	.profile-section
+	.profile-content
+	.profile-name:hover {
+	transform: scale(1.1);
 }
-.portfolio-container .content-section .profile-section .profile-content .gh-info {
-  padding: 10px 0px;
+.portfolio-container
+	.content-section
+	.profile-section
+	.profile-content
+	.gh-info {
+	padding: 10px 0px;
 }
-.portfolio-container .content-section .profile-section .profile-content .gh-info .info {
-  display: flex;
-  padding-bottom: 8px;
+.portfolio-container
+	.content-section
+	.profile-section
+	.profile-content
+	.gh-info
+	.info {
+	display: flex;
+	padding-bottom: 8px;
 }
-.portfolio-container .content-section .profile-section .profile-content .gh-info .info .info-text {
-  height: 100%;
-  padding: 2px;
-  margin: 0px;
-  padding-left: 10px;
-  font-size: 16px;
+.portfolio-container
+	.content-section
+	.profile-section
+	.profile-content
+	.gh-info
+	.info
+	.info-text {
+	height: 100%;
+	padding: 2px;
+	margin: 0px;
+	padding-left: 10px;
+	font-size: 16px;
 }
-.portfolio-container .content-section .profile-section .profile-content .gh-status {
-  display: flex;
+.portfolio-container
+	.content-section
+	.profile-section
+	.profile-content
+	.gh-status {
+	display: flex;
 }
-.portfolio-container .content-section .profile-section .profile-content .gh-status .profile-subtitle {
-  padding-left: 20px;
-  font-size: 18px;
+.portfolio-container
+	.content-section
+	.profile-section
+	.profile-content
+	.gh-status
+	.profile-subtitle {
+	padding-left: 20px;
+	font-size: 18px;
 }
-.portfolio-container .content-section .profile-section .profile-content .gh-status .profile-subtitle .status-num {
-  font-size: 20px;
-  font-weight: bold;
+.portfolio-container
+	.content-section
+	.profile-section
+	.profile-content
+	.gh-status
+	.profile-subtitle
+	.status-num {
+	font-size: 20px;
+	font-weight: bold;
 }
-.portfolio-container .content-section .profile-section .profile-content .gh-status .first-text {
-  padding-left: 5px;
+.portfolio-container
+	.content-section
+	.profile-section
+	.profile-content
+	.gh-status
+	.first-text {
+	padding-left: 5px;
 }
 .portfolio-container .content-section .project-section {
-  padding-top: 30px;
-  width: 900px;
-  margin: auto;
+	padding-top: 30px;
+	width: 900px;
+	margin: auto;
 }
-.portfolio-container .content-section .project-section .top-section {
-  padding: 20px;
+.portfolio-container
+	.content-section
+	.project-section
+	.top-section {
+	padding: 20px;
 }
-.portfolio-container .content-section .project-section .bottom-section {
-  text-align: center;
-  padding: 20px;
+.portfolio-container
+	.content-section
+	.project-section
+	.bottom-section {
+	text-align: center;
+	padding: 20px;
 }
 
 .repo-section {
-  display: flex;
+	display: flex;
 }
 .repo-section .repo-description {
-  width: 50%;
+	width: 50%;
 }
 .repo-section .repo-description .repo-title a.repo-link {
-  text-decoration: none;
+	text-decoration: none;
 }
-.repo-section .repo-description .repo-title a.repo-link p.MuiTypography-root {
-  color: black;
-  font-size: 20px;
-  padding-bottom: 20px;
-  transition: transform 0.3s ease;
+.repo-section
+	.repo-description
+	.repo-title
+	a.repo-link
+	p.MuiTypography-root {
+	color: black;
+	font-size: 20px;
+	padding-bottom: 20px;
+	transition: transform 0.3s ease;
 }
-.repo-section .repo-description .repo-title a.repo-link p.MuiTypography-root .MuiSvgIcon-root {
-  color: rgb(0, 102, 255);
+.repo-section
+	.repo-description
+	.repo-title
+	a.repo-link
+	p.MuiTypography-root
+	.MuiSvgIcon-root {
+	color: rgb(0, 102, 255);
 }
-.repo-section .repo-description .repo-title a.repo-link p.MuiTypography-root:hover {
-  transform: scale(1.1);
+.repo-section
+	.repo-description
+	.repo-title
+	a.repo-link
+	p.MuiTypography-root:hover {
+	transform: scale(1.1);
 }
-.repo-section .repo-description .repo-title a.repo-link p.MuiTypography-root:hover, .repo-section .repo-description .repo-title a.repo-link p.MuiTypography-root:focus {
-  transition: transform 0.3s ease;
+.repo-section
+	.repo-description
+	.repo-title
+	a.repo-link
+	p.MuiTypography-root:hover,
+.repo-section
+	.repo-description
+	.repo-title
+	a.repo-link
+	p.MuiTypography-root:focus {
+	transition: transform 0.3s ease;
 }
-.repo-section .repo-description .clone-container .clone-btn {
-  position: relative;
+.repo-section
+	.repo-description
+	.clone-container
+	.clone-btn {
+	position: relative;
 }
-.repo-section .repo-description .clone-container .clone-btn .MuiButtonBase-root {
-  width: 200px;
-  cursor: pointer;
+.repo-section
+	.repo-description
+	.clone-container
+	.clone-btn
+	.MuiButtonBase-root {
+	width: 200px;
+	cursor: pointer;
 }
-.repo-section .repo-description .clone-container .clone-btn .MuiButtonBase-root .MuiTypography-root {
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  padding-right: 5px;
+.repo-section
+	.repo-description
+	.clone-container
+	.clone-btn
+	.MuiButtonBase-root
+	.MuiTypography-root {
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	padding-right: 5px;
 }
-.repo-section .repo-description .clone-container .clone-btn .MuiButtonBase-root .MuiSvgIcon-root {
-  padding-left: 5px;
+.repo-section
+	.repo-description
+	.clone-container
+	.clone-btn
+	.MuiButtonBase-root
+	.MuiSvgIcon-root {
+	padding-left: 5px;
 }
 .repo-section .repo-description .description {
-  padding: 20px 10px 10px 10px;
+	padding: 20px 10px 10px 10px;
 }
-.repo-section .repo-description .description h6.MuiTypography-root.css-1lv9nvb-MuiTypography-root {
-  padding: 5px 0px;
+.repo-section
+	.repo-description
+	.description
+	h6.MuiTypography-root.css-1lv9nvb-MuiTypography-root {
+	padding: 5px 0px;
 }
-.repo-section .repo-description .description p.MuiTypography-root.css-zpphrz-MuiTypography-root {
-  padding: 5px 0px;
+.repo-section
+	.repo-description
+	.description
+	p.MuiTypography-root.css-zpphrz-MuiTypography-root {
+	padding: 5px 0px;
 }
 .repo-section .commit-container {
-  width: 50%;
+	width: 50%;
 }
-.repo-section .commit-container .css-ahj2mt-MuiTypography-root {
-  padding-top: 10px;
-  font-size: 18px;
+.repo-section
+	.commit-container
+	.css-ahj2mt-MuiTypography-root {
+	padding-top: 10px;
+	font-size: 18px;
 }
 .repo-section .commit-container .commit-section {
-  height: 500px;
-  overflow-y: auto;
-  position: relative;
-  margin-top: 10px;
+	height: 500px;
+	overflow-y: auto;
+	position: relative;
+	margin-top: 10px;
 }
-.repo-section .commit-container .commit-section .css-1ms7hib-MuiTimelineItem-root::before {
-  content: none !important;
+.repo-section
+	.commit-container
+	.commit-section
+	.css-1ms7hib-MuiTimelineItem-root::before {
+	content: none !important;
 }
-.repo-section .commit-container .commit-section .MuiTimeline-root .MuiTimelineItem-root .MuiGrid-root {
-  padding-left: 15px;
+.repo-section
+	.commit-container
+	.commit-section
+	.MuiTimeline-root
+	.MuiTimelineItem-root
+	.MuiGrid-root {
+	padding-left: 15px;
 }
 
 .css-66gjpw-MuiResponsiveChart-container {
-  margin-top: 20px;
+	margin-top: 20px;
 }
 .css-66gjpw-MuiResponsiveChart-container .css-1qkz8p7 {
-  font-size: 16px;
-  font-weight: bold;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.portfolio-container {
+	min-height: 100vh;
+	margin-bottom: 50px;
+}
+.portfolio-container .content-section .resume-subtitle {
+	font-family: "Lucida Sans";
+	text-align: center;
+	padding-top: 30px;
+}
+.portfolio-container .content-section .profile-section {
+	display: flex;
+	width: 700px;
+	margin: auto;
+	padding: 40px 20px 20px 20px;
+}
+.portfolio-container
+	.content-section
+	.profile-section
+	.gh-image {
+	margin: 0px 50px;
+	width: 200px;
+	height: 200px;
+}
+.portfolio-container
+	.content-section
+	.profile-section
+	.profile-content {
+	margin: 0px 20px;
+}
+.portfolio-container
+	.content-section
+	.profile-section
+	.profile-content
+	.profile-name {
+	font-size: 20px;
+	font-family: monospace;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	transition: transform 0.3s ease;
+}
+.portfolio-container
+	.content-section
+	.profile-section
+	.profile-content
+	.profile-name:hover {
+	transform: scale(1.1);
+}
+.portfolio-container
+	.content-section
+	.profile-section
+	.profile-content
+	.gh-info {
+	padding: 10px 0px;
+}
+.portfolio-container
+	.content-section
+	.profile-section
+	.profile-content
+	.gh-info
+	.info {
+	display: flex;
+	padding-bottom: 8px;
+}
+.portfolio-container
+	.content-section
+	.profile-section
+	.profile-content
+	.gh-info
+	.info
+	.info-text {
+	height: 100%;
+	padding: 2px;
+	margin: 0px;
+	padding-left: 10px;
+	font-size: 16px;
+}
+.portfolio-container
+	.content-section
+	.profile-section
+	.profile-content
+	.gh-status {
+	display: flex;
+}
+.portfolio-container
+	.content-section
+	.profile-section
+	.profile-content
+	.gh-status
+	.profile-subtitle {
+	padding-left: 20px;
+	font-size: 18px;
+}
+.portfolio-container
+	.content-section
+	.profile-section
+	.profile-content
+	.gh-status
+	.profile-subtitle
+	.status-num {
+	font-size: 20px;
+	font-weight: bold;
+}
+.portfolio-container
+	.content-section
+	.profile-section
+	.profile-content
+	.gh-status
+	.first-text {
+	padding-left: 5px;
+}
+.portfolio-container .content-section .project-section {
+	padding-top: 30px;
+	width: 900px;
+	margin: auto;
+}
+.portfolio-container
+	.content-section
+	.project-section
+	.top-section {
+	padding: 20px;
+}
+.portfolio-container
+	.content-section
+	.project-section
+	.bottom-section {
+	text-align: center;
+	padding: 20px;
+}
+
+.repo-section {
+	display: flex;
+}
+.repo-section .repo-description {
+	width: 50%;
+}
+.repo-section .repo-description .repo-title a.repo-link {
+	text-decoration: none;
+}
+.repo-section
+	.repo-description
+	.repo-title
+	a.repo-link
+	p.MuiTypography-root {
+	color: black;
+	font-size: 20px;
+	padding-bottom: 20px;
+	transition: transform 0.3s ease;
+}
+.repo-section
+	.repo-description
+	.repo-title
+	a.repo-link
+	p.MuiTypography-root
+	.MuiSvgIcon-root {
+	color: rgb(0, 102, 255);
+}
+.repo-section
+	.repo-description
+	.repo-title
+	a.repo-link
+	p.MuiTypography-root:hover {
+	transform: scale(1.1);
+}
+.repo-section
+	.repo-description
+	.repo-title
+	a.repo-link
+	p.MuiTypography-root:hover,
+.repo-section
+	.repo-description
+	.repo-title
+	a.repo-link
+	p.MuiTypography-root:focus {
+	transition: transform 0.3s ease;
+}
+.repo-section
+	.repo-description
+	.clone-container
+	.clone-btn {
+	position: relative;
+}
+.repo-section
+	.repo-description
+	.clone-container
+	.clone-btn
+	.MuiButtonBase-root {
+	width: 200px;
+	cursor: pointer;
+}
+.repo-section
+	.repo-description
+	.clone-container
+	.clone-btn
+	.MuiButtonBase-root
+	.MuiTypography-root {
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	padding-right: 5px;
+}
+.repo-section
+	.repo-description
+	.clone-container
+	.clone-btn
+	.MuiButtonBase-root
+	.MuiSvgIcon-root {
+	padding-left: 5px;
+}
+.repo-section
+	.repo-description
+	.clone-container
+	.clone-btn
+	small.copy-msg {
+	position: fixed;
+	bottom: 10px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 1px solid rgba(80, 150, 255, 0.7);
+	padding: 5px 10px;
+	border-radius: 10px;
+}
+.repo-section .repo-description .description {
+	padding: 20px 10px 10px 10px;
+}
+.repo-section
+	.repo-description
+	.description
+	h6.MuiTypography-root.css-1lv9nvb-MuiTypography-root {
+	padding: 5px 0px;
+}
+.repo-section
+	.repo-description
+	.description
+	p.MuiTypography-root.css-zpphrz-MuiTypography-root {
+	padding: 5px 0px;
+}
+.repo-section .commit-container {
+	width: 50%;
+}
+.repo-section
+	.commit-container
+	.css-ahj2mt-MuiTypography-root {
+	padding-top: 10px;
+	font-size: 18px;
+}
+.repo-section .commit-container .commit-section {
+	height: 500px;
+	overflow-y: auto;
+	position: relative;
+	margin-top: 10px;
+}
+.repo-section
+	.commit-container
+	.commit-section
+	.css-1ms7hib-MuiTimelineItem-root::before {
+	content: none !important;
+}
+.repo-section
+	.commit-container
+	.commit-section
+	.MuiTimeline-root
+	.MuiTimelineItem-root
+	.MuiGrid-root {
+	padding-left: 15px;
+}
+
+.css-66gjpw-MuiResponsiveChart-container {
+	margin-top: 20px;
+}
+.css-66gjpw-MuiResponsiveChart-container .css-1qkz8p7 {
+	font-size: 16px;
+	font-weight: bold;
 }
 
 .career-info {
-  width: 100%;
-  padding: 15px;
-  border: 1px solid rgba(170, 170, 170, 0.9);
-  border-radius: 20px;
-  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	padding: 15px;
+	border: 1px solid rgba(170, 170, 170, 0.9);
+	border-radius: 20px;
+	box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1);
 }
 
 .error-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 80vh;
 }
 .error-page .error-msg .css-i4bv87-MuiSvgIcon-root {
-  height: 50px;
-  width: 50px;
-  margin: 5px;
+	height: 50px;
+	width: 50px;
+	margin: 5px;
 }
 
 .navbar-controller {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #333;
-  z-index: 10;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #333;
+	z-index: 10;
 }
 
 .navlink-custom {
-  width: 12vh;
-  text-align: center;
+	width: 12vh;
+	text-align: center;
 }
 
 .nav-link.active {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 .footer {
-  position: absolute;
-  width: 100%;
-  z-index: 10;
+	position: absolute;
+	width: 100%;
+	z-index: 10;
 }
 .footer .socials-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 0px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 0px;
 }
-.footer .socials-wrapper .css-1xcvc1q-MuiStack-root .MuiAvatar-root {
-  background-color: transparent;
+.footer
+	.socials-wrapper
+	.css-1xcvc1q-MuiStack-root
+	.MuiAvatar-root {
+	background-color: transparent;
 }
-.footer .socials-wrapper .css-1xcvc1q-MuiStack-root .MuiAvatar-root .MuiSvgIcon-root {
-  color: black;
-  height: 40px;
-  width: 40px;
+.footer
+	.socials-wrapper
+	.css-1xcvc1q-MuiStack-root
+	.MuiAvatar-root
+	.MuiSvgIcon-root {
+	color: black;
+	height: 40px;
+	width: 40px;
 }
 .footer hr {
-  margin: auto;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  width: 150px;
-  border: 1.5px solid grey;
+	margin: auto;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	width: 150px;
+	border: 1.5px solid grey;
 }
 .footer .copyright-text {
-  color: grey;
-  text-align: center;
-  padding: 10px 0px;
-  margin: 0;
-}/*# sourceMappingURL=style.css.map */
+	color: grey;
+	text-align: center;
+	padding: 10px 0px;
+	margin: 0;
+} /*# sourceMappingURL=style.css.map */
