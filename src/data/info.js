@@ -1,11 +1,11 @@
 const INFO = {
 	home: {
-		title: "Welcome",
+		title: "Hi! I'm William.",
 		description:
 			"A passionate student at QUT pursuing a Master of IT with a focus on computer science.",
 	},
 	about: {
-		title: "About",
+		title: "Something About Me...",
 		welcome: {
 			title: "Hello there!👋",
 			description:
@@ -143,7 +143,6 @@ const INFO = {
 				description: ["AWS"],
 			},
 		},
-		outputs: {},
 		qualifications: {
 			0: {
 				name: "AWS Connect Certificate",
@@ -155,6 +154,14 @@ const INFO = {
 				name: "Udemy 2022 Python Full Course",
 			},
 		},
+	},
+	socials: {
+		github: "https://github.com/william199612",
+		linkedin:
+			"https://www.linkedin.com/in/williamhong1996/",
+		facebook: "https://www.facebook.com/williamhong1996",
+		instagram: "https://www.instagram.com/eco_william/",
+		email: "william851214@gmail.com",
 	},
 };
 

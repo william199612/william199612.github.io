@@ -1,4 +1,5 @@
 import React from "react";
+import Grid from "@mui/material/Grid";
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
@@ -29,7 +30,7 @@ const JourneyTimeline = () => {
 			<>
 				{INFO.resume.career.map((job, index) => {
 					return (
-						<TimelineItem>
+						<TimelineItem key={index}>
 							<TimelineOppositeContent
 								className="career-time"
 								sx={{ m: "auto 0" }}
@@ -74,11 +75,11 @@ const JourneyTimeline = () => {
 									>
 										{job.companyInfo}
 									</Typography>
-									<Typography align="left">
+									<Grid align="left">
 										<CareerDescription
 											descriptions={job.description}
 										/>
-									</Typography>
+									</Grid>
 								</div>
 							</TimelineContent>
 						</TimelineItem>
@@ -100,9 +101,9 @@ const SkillSets = ({ skills }) => {
 			}}
 			justifyContent="center"
 		>
-			{skills.map((skill) => {
+			{skills.map((skill, index) => {
 				return (
-					<>
+					<div key={index}>
 						<div className="icon-container">
 							<img
 								className="icon-image"
@@ -127,7 +128,7 @@ const SkillSets = ({ skills }) => {
 								{skill}
 							</Typography>
 						</div>
-					</>
+					</div>
 				);
 			})}
 		</Stack>
@@ -160,8 +161,8 @@ export default function Resume() {
 					</h2>
 					<p>{INFO.resume.summary}</p>
 				</div>
-				<hr className="section-line" />
 			</div>
+			<hr className="section-line" />
 			<div className="content-section">
 				<h2 className="resume-subtitle">My Journey</h2>
 				<div className="detail-content">

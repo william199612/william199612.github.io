@@ -4,7 +4,7 @@ import "../styles/style.css";
 
 const Nav = () => {
 	return (
-		<div>
+		<div className="navbar-controller">
 			<nav className="navbar navbar-expand-lg navbar-light bg-light">
 				<div className="container-fluid">
 					<button

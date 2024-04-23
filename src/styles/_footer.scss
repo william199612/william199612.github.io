@@ -2,4 +2,38 @@
 	position: absolute;
 	width: 100%;
 	z-index: 10;
+
+	.socials-wrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		padding: 10px 0px;
+
+		.css-1xcvc1q-MuiStack-root {
+			.MuiAvatar-root {
+				background-color: transparent;
+				.MuiSvgIcon-root {
+					color: black;
+					height: 40px;
+					width: 40px;
+				}
+			}
+		}
+	}
+
+	hr {
+		margin: auto;
+		margin-top: 8px;
+		margin-bottom: 8px;
+		width: 150px;
+		border: 1.5px solid grey;
+	}
+
+	.copyright-text {
+		color: grey;
+		text-align: center;
+		padding: 10px 0px;
+		margin: 0;
+	}
 }

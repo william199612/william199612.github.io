@@ -34,7 +34,7 @@ export default function Portfolio() {
 	return (
 		<div className="portfolio-container">
 			<div className="content-section">
-				<h2 className="resume-subtitle">My Projects</h2>
+				<h1 className="content-title">My Projects</h1>
 				<div className="profile-section">
 					<div className="gh-image round-img-container">
 						<img
