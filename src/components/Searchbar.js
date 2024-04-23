@@ -12,6 +12,7 @@ export default function Searchbar({
 	setSelectedRepoName,
 	repoData,
 	setRepoData,
+	setError,
 }) {
 	const [inputValue, setInputValue] = useState("");
 	const [value, setValue] = useState("All");
@@ -31,6 +32,7 @@ export default function Searchbar({
 					`Error fetching GitHub repo data: `,
 					err
 				);
+				setError(err);
 			});
 		setSelectedRepoName(value);
 	}, []);

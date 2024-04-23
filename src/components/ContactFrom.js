@@ -14,7 +14,7 @@ const EmailSuccessMessage = () => {
 	);
 };
 
-export default function ContactForm() {
+export default function ContactForm({ error, setError }) {
 	const [sent, setSent] = useState(true);
 	const form = useRef();
 
@@ -45,8 +45,9 @@ export default function ContactForm() {
 					console.log("SUCCESS!");
 					e.target.reset();
 				},
-				(error) => {
-					console.log("FAILED...", error.text);
+				(err) => {
+					console.log("FAILED...", err.text);
+					setError(err);
 				}
 			);
 	};
@@ -88,7 +89,7 @@ export default function ContactForm() {
 				>
 					Submit
 				</button>
-				{sent && <EmailSuccessMessage />}
+				{sent && error === null && <EmailSuccessMessage />}
 			</form>
 		</div>
 	);

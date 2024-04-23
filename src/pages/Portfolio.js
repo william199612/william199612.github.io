@@ -13,7 +13,7 @@ import { fetchGitHubData } from "../services/githubAPI";
 const userProfileURL =
 	"https://api.github.com/users/william199612";
 
-export default function Portfolio() {
+export default function Portfolio({ error, setError }) {
 	const [userData, setUserData] = useState([]);
 	const [repoData, setRepoData] = useState([]);
 	const [selectedRepoName, setSelectedRepoName] =
@@ -23,12 +23,13 @@ export default function Portfolio() {
 		// fetch for github user profile
 		fetchGitHubData(userProfileURL)
 			.then((data) => setUserData(data))
-			.catch((err) =>
+			.catch((err) => {
 				console.error(
 					"Error fetching GitHub user data: ",
 					err
-				)
-			);
+				);
+				setError(err);
+			});
 	}, []);
 
 	return (
@@ -111,6 +112,7 @@ export default function Portfolio() {
 								setSelectedRepoName={setSelectedRepoName}
 								repoData={repoData}
 								setRepoData={setRepoData}
+								setError={setError}
 							/>
 						</div>
 					</div>
@@ -118,6 +120,7 @@ export default function Portfolio() {
 						<RepoInfo
 							selectedRepoName={selectedRepoName}
 							repoData={repoData}
+							setError={setError}
 						/>
 					</div>
 				</div>

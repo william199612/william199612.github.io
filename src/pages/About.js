@@ -6,7 +6,7 @@ import GenerateButton from "../components/GenerateButton";
 import ContactForm from "../components/ContactFrom";
 import INFO from "../data/info";
 
-export default function About() {
+export default function About({ error, setError }) {
 	const [firstImg, setFirstImg] = useState("");
 	const [firstPage, setFirstPage] = useState(1);
 
@@ -25,44 +25,49 @@ export default function About() {
 	useEffect(() => {
 		fetchUnsplashImage("greeting", firstPage)
 			.then((data) => setFirstImg(data.urls.raw))
-			.catch((err) =>
+			.catch((err) => {
 				console.error(
 					"Error fetching GitHub user data: ",
 					err
-				)
-			);
+				);
+				setError(err);
+			});
 		fetchUnsplashImage("sofware developer", secondPage)
 			.then((data) => setSecondImg(data.urls.raw))
-			.catch((err) =>
+			.catch((err) => {
 				console.error(
 					"Error fetching GitHub user data: ",
 					err
-				)
-			);
+				);
+				setError(err);
+			});
 		fetchUnsplashImage("story", thirdPage)
 			.then((data) => setThirdImg(data.urls.raw))
-			.catch((err) =>
+			.catch((err) => {
 				console.error(
 					"Error fetching GitHub user data: ",
 					err
-				)
-			);
+				);
+				setError(err);
+			});
 		fetchUnsplashImage("coding", forthPage)
 			.then((data) => setForthImg(data.urls.raw))
-			.catch((err) =>
+			.catch((err) => {
 				console.error(
 					"Error fetching GitHub user data: ",
 					err
-				)
-			);
+				);
+				setError(err);
+			});
 		fetchUnsplashImage("passion", fifthPage)
 			.then((data) => setFifthImg(data.urls.raw))
-			.catch((err) =>
+			.catch((err) => {
 				console.error(
 					"Error fetching GitHub user data: ",
 					err
-				)
-			);
+				);
+				setError(err);
+			});
 	}, [
 		firstPage,
 		secondPage,
@@ -243,7 +248,10 @@ export default function About() {
 				</div>
 				<div className="col-md-6">
 					<div className="contact-form">
-						<ContactForm />
+						<ContactForm
+							error={error}
+							setError={setError}
+						/>
 					</div>
 				</div>
 			</div>

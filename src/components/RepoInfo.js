@@ -55,6 +55,7 @@ const CommitTimeline = ({ commits }) => {
 export default function RepoInfo({
 	selectedRepoName,
 	repoData,
+	setError,
 }) {
 	const [copied, setCopied] = useState(false);
 	const [selectedRepoData, setSelectedRepoData] = useState(
@@ -95,6 +96,7 @@ export default function RepoInfo({
 						`Error fetching GitHub commits data: `,
 						err
 					);
+					setError(err);
 				});
 
 			fetchGitHubData(repoLanguagesURL)
@@ -107,6 +109,7 @@ export default function RepoInfo({
 						`Error fetching GitHub commits data: `,
 						err
 					);
+					setError(err);
 				});
 
 			fetchGitHubData(repoCommitURL)
@@ -119,6 +122,7 @@ export default function RepoInfo({
 						`Error fetching GitHub commits data: `,
 						err
 					);
+					setError(err);
 				});
 		}
 	}, [selectedRepoName]);

@@ -5,7 +5,7 @@ import INFO from "../data/info";
 import { fetchUnsplashImage } from "../services/unsplashAPI";
 import GenerateButton from "../components/GenerateButton";
 
-const Home = () => {
+const Home = ({ setError }) => {
 	const [imageUrl, setImageUrl] = useState("");
 	const [page, setPage] = useState(1);
 
@@ -13,12 +13,13 @@ const Home = () => {
 		// console.log("home useEffect... page:", page);
 		fetchUnsplashImage("coding", page)
 			.then((data) => setImageUrl(data.urls.raw))
-			.catch((err) =>
+			.catch((err) => {
 				console.error(
 					"Error fetching GitHub user data: ",
 					err
-				)
-			);
+				);
+				setError(err);
+			});
 	}, [page]);
 
 	return (
