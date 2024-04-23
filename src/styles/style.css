@@ -217,6 +217,7 @@
   margin: auto;
 }
 .resume-container .content-section .resume-subtitle {
+.resume-container .content-section .resume-subtitle {
   font-family: "Lucida Sans";
   text-align: center;
 }
@@ -270,12 +271,185 @@
   transition: transform 0.3s ease;
 }
 
+.portfolio-container {
+  min-height: 100vh;
+  margin-bottom: 50px;
+}
+.portfolio-container .content-section .resume-subtitle {
+  font-family: "Lucida Sans";
+  text-align: center;
+  padding-top: 30px;
+}
+.portfolio-container .content-section .profile-section {
+  display: flex;
+  width: 700px;
+  margin: auto;
+  padding: 40px 20px 20px 20px;
+}
+.portfolio-container .content-section .profile-section .gh-image {
+  margin: 0px 50px;
+  width: 200px;
+  height: 200px;
+}
+.portfolio-container .content-section .profile-section .profile-content {
+  margin: 0px 20px;
+}
+.portfolio-container .content-section .profile-section .profile-content .profile-name {
+  font-size: 20px;
+  font-family: monospace;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+.portfolio-container .content-section .profile-section .profile-content .profile-name:hover {
+  transform: scale(1.1);
+}
+.portfolio-container .content-section .profile-section .profile-content .gh-info {
+  padding: 10px 0px;
+}
+.portfolio-container .content-section .profile-section .profile-content .gh-info .info {
+  display: flex;
+  padding-bottom: 8px;
+}
+.portfolio-container .content-section .profile-section .profile-content .gh-info .info .info-text {
+  height: 100%;
+  padding: 2px;
+  margin: 0px;
+  padding-left: 10px;
+  font-size: 16px;
+}
+.portfolio-container .content-section .profile-section .profile-content .gh-status {
+  display: flex;
+}
+.portfolio-container .content-section .profile-section .profile-content .gh-status .profile-subtitle {
+  padding-left: 20px;
+  font-size: 18px;
+}
+.portfolio-container .content-section .profile-section .profile-content .gh-status .profile-subtitle .status-num {
+  font-size: 20px;
+  font-weight: bold;
+}
+.portfolio-container .content-section .profile-section .profile-content .gh-status .first-text {
+  padding-left: 5px;
+}
+.portfolio-container .content-section .project-section {
+  padding-top: 30px;
+  width: 900px;
+  margin: auto;
+}
+.portfolio-container .content-section .project-section .top-section {
+  padding: 20px;
+}
+.portfolio-container .content-section .project-section .bottom-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.repo-section {
+  display: flex;
+}
+.repo-section .repo-description {
+  width: 50%;
+}
+.repo-section .repo-description .repo-title a.repo-link {
+  text-decoration: none;
+}
+.repo-section .repo-description .repo-title a.repo-link p.MuiTypography-root {
+  color: black;
+  font-size: 20px;
+  padding-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+.repo-section .repo-description .repo-title a.repo-link p.MuiTypography-root .MuiSvgIcon-root {
+  color: rgb(0, 102, 255);
+}
+.repo-section .repo-description .repo-title a.repo-link p.MuiTypography-root:hover {
+  transform: scale(1.1);
+}
+.repo-section .repo-description .repo-title a.repo-link p.MuiTypography-root:hover, .repo-section .repo-description .repo-title a.repo-link p.MuiTypography-root:focus {
+  transition: transform 0.3s ease;
+}
+.repo-section .repo-description .clone-container .clone-btn {
+  position: relative;
+}
+.repo-section .repo-description .clone-container .clone-btn .MuiButtonBase-root {
+  width: 200px;
+  cursor: pointer;
+}
+.repo-section .repo-description .clone-container .clone-btn .MuiButtonBase-root .MuiTypography-root {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-right: 5px;
+}
+.repo-section .repo-description .clone-container .clone-btn .MuiButtonBase-root .MuiSvgIcon-root {
+  padding-left: 5px;
+}
+.repo-section .repo-description .clone-container .clone-btn small.copy-msg {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(80, 150, 255, 0.7);
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.repo-section .repo-description .description {
+  padding: 20px 10px 10px 10px;
+}
+.repo-section .repo-description .description h6.MuiTypography-root.css-1lv9nvb-MuiTypography-root {
+  padding: 5px 0px;
+}
+.repo-section .repo-description .description p.MuiTypography-root.css-zpphrz-MuiTypography-root {
+  padding: 5px 0px;
+}
+.repo-section .commit-container {
+  width: 50%;
+}
+.repo-section .commit-container .css-ahj2mt-MuiTypography-root {
+  padding-top: 10px;
+  font-size: 18px;
+}
+.repo-section .commit-container .commit-section {
+  height: 500px;
+  overflow-y: auto;
+  position: relative;
+  margin-top: 10px;
+}
+.repo-section .commit-container .commit-section .css-1ms7hib-MuiTimelineItem-root::before {
+  content: none !important;
+}
+.repo-section .commit-container .commit-section .MuiTimeline-root .MuiTimelineItem-root .MuiGrid-root {
+  padding-left: 15px;
+}
+
+.css-66gjpw-MuiResponsiveChart-container {
+  margin-top: 20px;
+}
+.css-66gjpw-MuiResponsiveChart-container .css-1qkz8p7 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .career-info {
   width: 100%;
   padding: 15px;
   border: 1px solid rgba(170, 170, 170, 0.9);
   border-radius: 20px;
   box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+.error-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+.error-page .error-msg .css-i4bv87-MuiSvgIcon-root {
+  height: 50px;
+  width: 50px;
+  margin: 5px;
 }
 
 .navlink-custom {
