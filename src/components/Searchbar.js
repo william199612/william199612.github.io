@@ -56,6 +56,7 @@ export default function Searchbar({
 					label="Search or Select a Repository"
 				/>
 			)}
+			disableClearable // disable error input search
 		/>
 	);
 }
