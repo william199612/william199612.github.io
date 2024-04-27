@@ -30,6 +30,8 @@ To contribute to the development of this application, follow these steps:
 
 6. Create a new Pull Request
 
+| Remember to obtain your own API Keys from [Unsplash API](https://unsplash.com/documentation) to fetch images.
+
 ## Features
 
 - Generate: Click and Generate random pictures.
