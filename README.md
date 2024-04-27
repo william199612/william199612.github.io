@@ -30,7 +30,8 @@ To contribute to the development of this application, follow these steps:
 
 6. Create a new Pull Request
 
-| Remember to obtain your own API Keys from [Unsplash API](https://unsplash.com/documentation) to fetch images.
+> Remember to obtain your own API Keys from [Unsplash API](https://unsplash.com/documentation) to fetch images.
+> Personal GitHub API key will remain unseen for sucurity reasons.
 
 ## Features
 
