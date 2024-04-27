@@ -15,7 +15,7 @@ const EmailSuccessMessage = () => {
 };
 
 export default function ContactForm({ error, setError }) {
-	const [sent, setSent] = useState(true);
+	const [sent, setSent] = useState(false);
 	const form = useRef();
 
 	const serviceId = process.env.REACT_APP_EMAIL_SERVICE_ID;
@@ -26,7 +26,7 @@ export default function ContactForm({ error, setError }) {
 	const handleEmailSent = () => {
 		setTimeout(() => {
 			setSent(true);
-		}, 1000);
+		}, 500);
 
 		setTimeout(() => {
 			setSent(false);
