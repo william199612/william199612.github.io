@@ -72,7 +72,7 @@ const INFO = {
 			},
 			{
 				title: "Frontend Intern",
-				date: "Dec 2024 - Jan 2023",
+				date: "Dec 2022 - Jan 2023",
 				location: "Taipei, Taiwan",
 				company: "Askplore",
 				type: "IT",
