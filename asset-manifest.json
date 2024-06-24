@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.cd7e804c.css",
+    "main.js": "/portfolio/static/js/main.428debfc.js",
+    "static/media/top-image.jpg": "/portfolio/static/media/top-image.da10a03b111ffed60db8.jpg",
+    "static/media/aws-connect-certificate.png": "/portfolio/static/media/aws-connect-certificate.b07548e305ce608742da.png",
+    "static/media/william2.jpg": "/portfolio/static/media/william2.b464202344212d8baed4.jpg",
+    "static/media/udemy-2024-full-stack-web-development.png": "/portfolio/static/media/udemy-2024-full-stack-web-development.057d2d793f44cef07e87.png",
+    "static/media/udemy-2022-python-full-course.png": "/portfolio/static/media/udemy-2022-python-full-course.833cfb9f17231fa91c27.png",
+    "index.html": "/portfolio/index.html",
+    "main.cd7e804c.css.map": "/portfolio/static/css/main.cd7e804c.css.map",
+    "main.428debfc.js.map": "/portfolio/static/js/main.428debfc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cd7e804c.css",
+    "static/js/main.428debfc.js"
+  ]
+}
